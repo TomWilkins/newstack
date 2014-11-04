@@ -1,0 +1,28 @@
+
+<!-- include the polymer core : main api for custom elements -->
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<link rel="import" href="modal-popup.html">
+
+<!-- define the name of the element : must contain a dash -->
+<polymer-element name="login-button">
+
+<!-- wrap the element template code -->
+	<template>
+		<button id="login" on-tap="{{loginButtonClick}}">login</button>
+		<modal-popup id="loginModal" hidden>
+
+			Loads of login stuff
+
+		</modal-popup>
+	</template>
+	<script>
+	Polymer('login-button', {
+
+		loginButtonClick: function(){
+			this.$.loginModal.hidden = false;
+			console.log("login modal hidden set to false");
+		},
+	});
+	</script>
+</polymer-element>

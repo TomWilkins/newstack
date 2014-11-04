@@ -1,0 +1,85 @@
+<!-- loop through each item in the stack -->
+            <template repeat="{{stack in all-stacks}}">
+              <stack-element>
+                <h1>{{stack.title}}</h1>
+                <h4>{{stack.url}}</h4>
+              </stack-element>
+            </template>
+
+            <div class="stack-info">
+              <h1>{{all-stacks.title}}</h1>
+              <div class="stack-author">created by <span>{{users.username}}</span></div>
+              <div class="stack-info-text">
+                {{all-stacks.description}}
+              </div><!-- /stack-info-text -->
+            </div><!-- /stack-info -->
+             <!-- loop through all users -->
+      <template repeat="{{users in posts}}">
+        
+        <!-- loop through all stacks in users -->
+        <template repeat="{{all-stacks in users}}">
+          <div class="newstack">
+
+          </div><!-- /newstack -->
+        </template>
+      </template>
+    </template>
+
+
+
+
+<!-- include the polymer core : main api for custom elements -->
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<!-- post web service 
+<link rel="import" href="../service/post-service.html">
+
+<link rel="import" href="stack-element.html">-->
+
+<!-- define the name of the element : must contain a dash -->
+<polymer-element name="news-stack">
+
+  <!-- wrap the element template code -->
+  <template>
+    <link rel="stylesheet" href="/stylesheets/compontents/stack.css">
+
+    <!-- get the posts from the web service 
+    <post-service id="service" posts="{{posts}}"></post-service>-->
+
+      <div class="newstack">
+      hello
+      </div><!-- /newstack -->
+      <!--
+      <div class="stack">
+        <button class="stack-remove">⊗</button>
+        <div class="stack-heading-wrapper">
+          <h1>Story</h1>
+          <h4>bbc.co.uk/some/cool/story</h4>
+        </div>
+      </div>
+      <div class="stack"><button class="stack-add">⊕</button></div>
+      <div class="stack"><button class="stack-add">⊕</button></div>
+      <div class="stack"><button class="stack-add">⊕</button></div>
+
+      <div class="stack-info">
+        <h1>{{title}}</h1><div class="stack-author">created by <span>tomwilkins</span></div>
+        <div class="stack-info-text">
+          <lorem-element></lorem-element>
+        </div>
+      </div>-->
+  </template>
+</polymer-element>
+
+
+<!-- include the polymer core : main api for custom elements -->
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<!-- define the name of the element : must contain a dash -->
+<polymer-element name="lorem-element" noscript>
+
+  <!-- wrap the element template code -->
+  <template>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </template>
+</polymer-element>
+

@@ -1,0 +1,55 @@
+
+<!-- include the polymer core : main api for custom elements -->
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<!-- define the name of the element : must contain a dash -->
+<polymer-element name="slot-element" attributes="url">
+
+  <!-- wrap the element template code -->
+  <template>
+  	<div class="slot" style="background-image:url( {{imageUrl}} );">
+		<content></content>
+  	</div>
+  </template>
+  <script>
+   Polymer('slot-element', {
+   	publish:{
+	   	imageUrl: {
+	   		reflect : true
+	   	}
+	},
+
+   	ready: function() { 
+
+
+
+	    if(this.url != null){
+	    	this.imageUrl = "img/myloader.gif";
+	    	var that = this;
+			myLinkPreview.crawlText(this.url).done(function(results){
+				
+				that.imageUrl = results.images;
+
+			});
+
+		}else{
+			console.log("url is null");
+		}
+    },
+   });
+   </script>
+</polymer-element>
+/*
+, function(images){
+				this.imageUrl = "banana";
+
+		      	if(images.length > 0){
+			        console.log("first image: " + images[0]);
+			        
+	      			this.imageUrl = images[0]
+				      
+
+		      	}else{
+		        	console.log("no images found");
+		      	}
+*/

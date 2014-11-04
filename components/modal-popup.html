@@ -1,0 +1,39 @@
+
+<!-- include the polymer core : main api for custom elements -->
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<!-- define the name of the element : must contain a dash -->
+<polymer-element name="modal-popup">
+
+<!-- wrap the element template code -->
+	<template>
+		<link rel="stylesheet" href="../stylesheets/compontents/modal.css">
+
+		<div id="modal">
+			<section id="modal-content">
+				<button id="close" on-tap="{{closeModal}}">⊗</button>
+				<content></content>
+			</section><!-- /modal-content -->
+
+		</div><!-- /modal -->
+
+	</template>
+	<script>
+		Polymer('modal-popup', {
+			publish:{
+			   	hidden: {
+			   		value : true,
+			   		reflect : true
+			   	}
+			},
+
+			closeModal: function(){
+				this.hidden = true;
+			},
+
+			ready: function(){
+			},
+
+		});
+	</script>
+</polymer-element>

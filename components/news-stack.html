@@ -1,0 +1,96 @@
+
+<!-- include the polymer core : main api for custom elements -->
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<!-- stack element -->
+<link rel="import" href="slot-element.html">
+
+<!-- define the name of the element : must contain a dash -->
+<polymer-element name="news-stack" attributes="stack user">
+  
+  <!-- wrap the element template code -->
+  <template>
+    <link rel="stylesheet" href="../stylesheets/compontents/stack.css">
+      <div class="newstack">
+
+      <template repeat="{{slot in stack.slots}}">
+        <slot-element url="{{slot.url}}">
+
+        <template if="{{slot.empty == true}}">
+          <button class="slot-add" on-tap="{{addStackSlot}}">⊕</button>
+          
+        </template><!-- if slot.empty -->
+
+        <template if="{{slot.empty == false}}">
+          <button class="slot-remove" on-tap="{{removeStackSlot}}">⊗</button>
+          <a href="{{slot.url}}" target="_blank" class="stack-heading-wrapper">
+            <h1>{{slot.title}}</h1>
+            <h4>{{slot.url}}</h4>
+          </a>
+        </template><!-- if !slot.empty -->
+
+        </slot-element>
+      </template><!-- repeat each slot -->
+      
+      <div class="stack-info">
+        <h1>{{stack.title}}</h1>
+        <div class="stack-author">
+        created by <a href="/users/{{user.username}}">{{user.username}}</a>
+        </div>
+        <div class="stack-info-text">
+          {{stack.description}}
+        </div>
+      </div>
+    </div><!-- /newstack -->
+
+  </template><!-- /element -->
+  <script>
+   Polymer('news-stack', {
+
+    username: "TODO",
+
+    // polymer element has been properly declared
+    ready: function() { 
+      console.log(this.stack.templateInstance);
+    },
+
+    // instance of this element is created
+    created: function(){
+
+      //console.log($("button.stack-add"));
+    },
+
+    // instance of this element inserted into the DOM
+    attched: function(){
+      //console.log("instance added to DOM");
+    },
+
+    // called when elements initial set of children exist
+    domReady: function(){
+      //console.log("dom ready");
+    },
+
+    // an instance removed from DOM
+    detachedCallback: function(){
+
+    },
+
+    // an attribute was added, removed or updated
+    attributeChanged: function(){
+      //console.log("someting was changed");
+    },
+
+
+    addStackSlot: function(event, detail, sender){
+      this.fire('add-stack-slot');
+    },
+
+    removeStackSlot: function(event, detail, sender){
+      
+      this.fire('remove-stack-slot', 
+        {"slotid" : sender.templateInstance.model.slot.iid}
+      );
+    },
+   });
+  </script>
+</polymer-element>

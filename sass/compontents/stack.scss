@@ -1,0 +1,126 @@
+@import 'compass';
+@import '_my_mixins';
+@import '_vars';
+
+@include global-reset;
+
+.newstack{
+  margin: 0 auto;
+  background: $green;
+  width:100%;
+  padding-bottom:50px;
+  @include border-radius(2px);
+  border-bottom: 2px solid white;
+  .slot{
+    width:22%;
+    margin:1.5%;
+    height:198px;
+    background:yellow;
+    float:left;
+    background: rgba(59,59,61, 0.4);
+    color:$grey;
+    word-wrap: break-word;
+    position: relative;
+    overflow:hidden;
+    @include single-transition(background-color, 0.2s);
+    @include single-transition(scale, 0.2s);
+    @include transition-transform(0.2s);
+    z-index: 1;
+    background-repeat: no-repeat;
+
+    &-add{
+      width:100%;
+      height:100%;
+      cursor: pointer;
+      position: absolute;
+      font-size: 9em;
+      text-align: center;
+      color: rgba(59,59,61, 0.5);border:0;
+      background-color: transparent;
+      @include single-transition(color, 0.2s);
+    }
+
+    &-remove{
+      font-size: 2em;
+      position: absolute;
+      top: -2px;
+      right:5px;
+      background-color: transparent;
+      border:0;
+      color: rgba(59,59,61, 0.5);
+      z-index:2;
+      @include single-transition(color, 0.2s);
+      &:hover{
+        color: $grey;
+      }
+      cursor: pointer;
+    }
+
+    .stack-heading-wrapper{
+      text-decoration: none;
+      position: absolute;
+      padding-top:40px;
+      width:100%;
+      height:100%;
+      color:$grey;
+    }
+
+    h1{
+      border-bottom:2px solid $grey;
+      padding-bottom:2px;
+      font-size:1.5em;
+      padding-left:5px;
+      background:rgba(0,0,0,0.5);
+      padding-right:5px;
+    }
+
+    h4{
+      padding-top:2px;
+      background:rgba(0,0,0,0.5);
+      padding-left:5px;
+      padding-right:5px;
+    }
+
+    &:hover{
+      background-color: rgba(59,59,61, 0.8);
+      @include scale(1.1, 1.1);
+      z-index: 2;
+
+      .slot-add{
+        color: $grey;
+      }
+
+    }
+  }// .stack
+  .stack-info{
+    padding-left:15px;
+    padding-right:15px;
+
+    h1{
+      font-size: 2em;
+      display: inline;
+    }
+    .stack-author{
+      font-size: 1em;
+      color: rgba(59,59,61, 0.5);
+      display: inline;
+      margin-left:15px;
+      @include single-transition(color, 0.2s);
+
+      a{
+        text-decoration: none;
+        cursor: pointer;
+        color: rgba(59,59,61, 0.5);
+        &:hover{
+          color: rgba(59,59,61, 0.8);
+        }
+      }
+    }
+    .stack-info-text{
+      border-top: 2px solid $darkgreen;
+      margin-top:5px;
+      padding-top:5px;
+    }
+
+  }
+}// .newstack

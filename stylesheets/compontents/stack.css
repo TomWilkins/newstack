@@ -1,0 +1,215 @@
+/* line 5, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 7, ../../sass/compontents/stack.scss */
+.newstack {
+  margin: 0 auto;
+  background: #98C73D;
+  width: 100%;
+  padding-bottom: 50px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  border-bottom: 2px solid white;
+}
+/* line 14, ../../sass/compontents/stack.scss */
+.newstack .slot {
+  width: 22%;
+  margin: 1.5%;
+  height: 198px;
+  background: yellow;
+  float: left;
+  background: rgba(59, 59, 61, 0.4);
+  color: #eee;
+  word-wrap: break-word;
+  position: relative;
+  overflow: hidden;
+  -moz-transition: background-color 0.2s;
+  -o-transition: background-color 0.2s;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  -moz-transition: scale 0.2s;
+  -o-transition: scale 0.2s;
+  -webkit-transition: scale 0.2s;
+  transition: scale 0.2s;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  -moz-transition: -moz-transform 0.2s linear;
+  -ms-transition: -ms-transform 0.2s linear;
+  -o-transition: -o-transform 0.2s linear;
+  transition: transform 0.2s linear;
+  z-index: 1;
+  background-repeat: no-repeat;
+}
+/* line 31, ../../sass/compontents/stack.scss */
+.newstack .slot-add {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  position: absolute;
+  font-size: 9em;
+  text-align: center;
+  color: rgba(59, 59, 61, 0.5);
+  border: 0;
+  background-color: transparent;
+  -moz-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+/* line 43, ../../sass/compontents/stack.scss */
+.newstack .slot-remove {
+  font-size: 2em;
+  position: absolute;
+  top: -2px;
+  right: 5px;
+  background-color: transparent;
+  border: 0;
+  color: rgba(59, 59, 61, 0.5);
+  z-index: 2;
+  -moz-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+  cursor: pointer;
+}
+/* line 53, ../../sass/compontents/stack.scss */
+.newstack .slot-remove:hover {
+  color: #eee;
+}
+/* line 59, ../../sass/compontents/stack.scss */
+.newstack .slot .stack-heading-wrapper {
+  text-decoration: none;
+  position: absolute;
+  padding-top: 40px;
+  width: 100%;
+  height: 100%;
+  color: #eee;
+}
+/* line 68, ../../sass/compontents/stack.scss */
+.newstack .slot h1 {
+  border-bottom: 2px solid #eee;
+  padding-bottom: 2px;
+  font-size: 1.5em;
+  padding-left: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  padding-right: 5px;
+}
+/* line 77, ../../sass/compontents/stack.scss */
+.newstack .slot h4 {
+  padding-top: 2px;
+  background: rgba(0, 0, 0, 0.5);
+  padding-left: 5px;
+  padding-right: 5px;
+}
+/* line 84, ../../sass/compontents/stack.scss */
+.newstack .slot:hover {
+  background-color: rgba(59, 59, 61, 0.8);
+  -moz-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
+  -webkit-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+  z-index: 2;
+}
+/* line 89, ../../sass/compontents/stack.scss */
+.newstack .slot:hover .slot-add {
+  color: #eee;
+}
+/* line 95, ../../sass/compontents/stack.scss */
+.newstack .stack-info {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/* line 99, ../../sass/compontents/stack.scss */
+.newstack .stack-info h1 {
+  font-size: 2em;
+  display: inline;
+}
+/* line 103, ../../sass/compontents/stack.scss */
+.newstack .stack-info .stack-author {
+  font-size: 1em;
+  color: rgba(59, 59, 61, 0.5);
+  display: inline;
+  margin-left: 15px;
+  -moz-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+/* line 110, ../../sass/compontents/stack.scss */
+.newstack .stack-info .stack-author a {
+  text-decoration: none;
+  cursor: pointer;
+  color: rgba(59, 59, 61, 0.5);
+}
+/* line 114, ../../sass/compontents/stack.scss */
+.newstack .stack-info .stack-author a:hover {
+  color: rgba(59, 59, 61, 0.8);
+}
+/* line 119, ../../sass/compontents/stack.scss */
+.newstack .stack-info .stack-info-text {
+  border-top: 2px solid #74982f;
+  margin-top: 5px;
+  padding-top: 5px;
+}

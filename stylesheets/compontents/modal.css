@@ -1,0 +1,38 @@
+/* line 4, ../../sass/compontents/modal.scss */
+#modal {
+  background: rgba(59, 59, 61, 0.4);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 50;
+}
+/* line 12, ../../sass/compontents/modal.scss */
+#modal-content {
+  background: white;
+  width: 50%;
+  height: 50%;
+  top: 25%;
+  left: 25%;
+  position: absolute;
+}
+/* line 20, ../../sass/compontents/modal.scss */
+#modal-content #close {
+  font-size: 5em;
+  padding: 0;
+  position: absolute;
+  top: 0px;
+  right: 30px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  color: rgba(59, 59, 61, 0.5);
+  -moz-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+/* line 31, ../../sass/compontents/modal.scss */
+#modal-content #close:hover {
+  color: rgba(59, 59, 61, 0.8);
+}

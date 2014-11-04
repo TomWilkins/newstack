@@ -1,0 +1,32 @@
+
+<!-- polymer core api -->
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<!-- polymer core ajax api -->
+<link rel="import" href="../bower_components/core-ajax/core-ajax.html">
+
+<!-- reddit-element : dynamic url using an attribute -->
+<polymer-element name="reddit-element" attributes="subreddit">
+  <template>
+    <!-- injects the attribute value into the url -->
+    <core-ajax url="http://www.reddit.com//r/{{subreddit}}/about.json" auto response="{{response}}"></core-ajax>
+    <!-- outputs reddit data -->
+    <p>{{response.data.public_description}}</p>
+  </template>
+  <script>
+    Polymer('reddit-element', {
+      // default attribute overwritten by user value
+      subreddit: "aww"
+    });
+  </script>
+</polymer-element>
+
+<!-- reddit-element : hard coded url
+<polymer-element name="reddit-element">
+  <template>
+    <!-- get json from reddit
+    <core-ajax url="http://www.reddit.com//r/aww/about.json" auto response="{{resp}}"></core-ajax>
+    <!-- output reddit JSON
+    <p>{{resp.data.public_description}}</p>
+  </template>
+</polymer-element>
+-->

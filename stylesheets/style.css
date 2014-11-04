@@ -1,0 +1,165 @@
+@charset "UTF-8";
+/* line 5, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 7, ../sass/style.scss */
+.clearfix:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+/* line 14, ../sass/style.scss */
+body {
+  font-size: 1em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 100%;
+  height: 100%;
+  background: #eee;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1;
+}
+/* line 24, ../sass/style.scss */
+body header {
+  margin: 0 auto;
+  background: #98C73D;
+  border-bottom: 5px solid #74982f;
+  min-width: 900px;
+}
+/* line 29, ../sass/style.scss */
+body header #header-wrapper {
+  padding: 30px;
+  max-width: 900px;
+  min-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+/* line 36, ../sass/style.scss */
+body header #header-wrapper a {
+  text-align: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  display: inline-block;
+  font-size: 4em;
+  text-decoration: none;
+  color: #3B3B3D;
+  position: relative;
+}
+/* line 44, ../sass/style.scss */
+body header #header-wrapper a :before {
+  color: #3B3B3D;
+  content: "☰";
+  display: inline;
+  padding-right: 5px;
+  position: absolute;
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+  font-size: .9em;
+  bottom: 0;
+}
+/* line 54, ../sass/style.scss */
+body header #header-wrapper a #stack {
+  color: #98C73D;
+  display: inline;
+  padding-right: 5px;
+}
+/* line 60, ../sass/style.scss */
+body header #header-wrapper #search-input {
+  background: none;
+  border: 0;
+  border-bottom: 2px solid #74982f;
+  box-shadow: none;
+  border-radius: 0;
+  vertical-align: bottom;
+  width: 345px;
+  position: relative;
+  top: -2px;
+  padding: 3px 6px;
+  color: #eee;
+  font-size: 1.2em;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-transition: background-color 0.2s;
+  -o-transition: background-color 0.2s;
+  -webkit-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+  outline: 0;
+}
+/* line 77, ../sass/style.scss */
+body header #header-wrapper #search-input:focus {
+  background-color: #74982f;
+}
+/* line 84, ../sass/style.scss */
+body #main-content {
+  max-width: 900px;
+  min-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  background: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}

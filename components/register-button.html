@@ -1,0 +1,27 @@
+
+<!-- include the polymer core : main api for custom elements -->
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<link rel="import" href="modal-popup.html">
+
+<!-- define the name of the element : must contain a dash -->
+<polymer-element name="register-button">
+
+<!-- wrap the element template code -->
+	<template>
+		<button id="register" on-tap="{{registerButtonClick}}">register</button>
+		<modal-popup id="registerModal" hidden>
+
+			Loads of register stuff
+
+		</modal-popup>
+	</template>
+	<script>
+	Polymer('register-button', {
+
+		registerButtonClick: function(){
+			this.$.registerModal.hidden = false;
+		},
+	});
+	</script>
+</polymer-element>

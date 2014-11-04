@@ -1,0 +1,21 @@
+{
+  "name": "newstack",
+  "version": "0.0.1",
+  "authors": [
+    "Tom Wilkins <tomwilkins93@hotmail.co.uk>"
+  ],
+  "description": "Newstack app",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.4.2"
+  }
+}

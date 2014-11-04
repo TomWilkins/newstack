@@ -1,0 +1,9 @@
+
+
+@mixin transition-transform($time){
+    -webkit-transition: -webkit-transform $time linear;
+    -moz-transition:   -moz-transform $time linear;
+    -ms-transition:   -ms-transform $time linear;
+    -o-transition: -o-transform $time linear;
+    transition: transform $time linear;
+}
